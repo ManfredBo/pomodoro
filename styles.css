@@ -1,43 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-image: url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .container {
     text-align: center;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #2962ff;
+    margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 .timer {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     margin: 2rem 0;
+    color: #1565c0;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .controls button {
     font-size: 1.1rem;
     margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #2962ff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .controls button:hover {
-    background-color: #45a049;
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+.controls button:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+    transform: none;
 }
 
 #status-text {
     font-size: 1.2rem;
-    color: #666;
+    color: #1976d2;
+    font-weight: 500;
 } 

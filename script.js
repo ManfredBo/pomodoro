@@ -12,8 +12,13 @@ const statusText = document.getElementById('status-text');
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
+    const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    
     minutesDisplay.textContent = minutes.toString().padStart(2, '0');
     secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+    
+    // Update title bar
+    document.title = `${timeString} - Pomodoro Timer`;
 }
 
 function switchMode() {
